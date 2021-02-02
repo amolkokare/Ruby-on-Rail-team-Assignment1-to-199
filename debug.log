@@ -1,0 +1,19 @@
+[0129/153837.784:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0129/153837.872:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0129/153837.874:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/145433.451:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/145433.473:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/145433.478:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/145433.496:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/145433.506:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/145433.518:ERROR:crash_report_database_win.cc(469)] failed to stat report
+[0130/150928.129:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.178:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.179:ERROR:process_reader_win.cc(151)] SuspendThread: Access is denied. (0x5)
+[0130/150928.179:ERROR:exception_snapshot_win.cc(98)] thread ID 5056 not found in process
