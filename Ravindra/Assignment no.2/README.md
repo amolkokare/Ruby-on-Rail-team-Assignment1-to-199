@@ -5,13 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version - 2.7.2
+* Ruby version
 
 * System dependencies
 
-* Configuration 
+* Configuration
 
-* Database creation - pg
+* Database creation
 
 * Database initialization
 
