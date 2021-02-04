@@ -64,10 +64,6 @@ class BooksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def book_params
-<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/app/controllers/books_controller.rb
       params.require(:book).permit(:Title, :Published_year,:author_id)
-=======
-      params.require(:book).permit(:title, :published_year,:author_id)
->>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/app/controllers/books_controller.rb
     end
 end

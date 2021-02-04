@@ -1,18 +1,9 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/test/fixtures/books.yml
   Title: MyString
   Published_year: 1
 
 two:
   Title: MyString
   Published_year: 1
-=======
-  title: MyString
-  published_year: 1
-
-two:
-  title: MyString
-  published_year: 1
->>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/test/fixtures/books.yml
