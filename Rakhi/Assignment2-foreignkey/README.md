@@ -25,3 +25,5 @@ Things you may want to cover:
 
 
 ![Author](https://user-images.githubusercontent.com/76157209/106856302-4324e480-66e4-11eb-8312-ac1a7bc22733.png)
+
+![book information](https://user-images.githubusercontent.com/76157209/106856285-3e603080-66e4-11eb-9c76-39608868e3aa.png)
