@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/db/schema.rb
 ActiveRecord::Schema.define(version: 2021_02_03_083901) do
+=======
+ActiveRecord::Schema.define(version: 2021_02_03_081937) do
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/db/schema.rb
 
   create_table "authors", force: :cascade do |t|
     t.string "name"
@@ -20,8 +24,13 @@ ActiveRecord::Schema.define(version: 2021_02_03_083901) do
   end
 
   create_table "books", force: :cascade do |t|
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/db/schema.rb
     t.string "Title"
     t.integer "Published_year"
+=======
+    t.string "title"
+    t.integer "published_year"
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/db/schema.rb
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "author_id"

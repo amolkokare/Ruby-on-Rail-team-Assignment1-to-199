@@ -1,13 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div align="center">
+<h1 >Books</h1>
 
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/app/views/books/index.html.erb
 <h1><center>Books</center></h1>
 
 <table>
+=======
+<table border="4">
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/app/views/books/index.html.erb
   <thead>
     <tr>
       <th>Title</th>
       <th>Published year</th>
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/app/views/books/index.html.erb
        <th>Author</th>
+=======
+      <th>Author</th>
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/app/views/books/index.html.erb
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -15,9 +25,15 @@
   <tbody>
     <% @books.each do |book| %>
       <tr>
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/app/views/books/index.html.erb
         <td><%= book.Title %></td>
         <td><%= book.Published_year %></td>
         <td><%= book.author.name %></td>
+=======
+        <td><%= book.title %></td>
+        <td><%= book.published_year %></td>
+         <td><%= book.author.name %></td>
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/app/views/books/index.html.erb
         <td><%= link_to 'Show', book %></td>
         <td><%= link_to 'Edit', edit_book_path(book) %></td>
         <td><%= link_to 'Destroy', book, method: :delete, data: { confirm: 'Are you sure?' } %></td>

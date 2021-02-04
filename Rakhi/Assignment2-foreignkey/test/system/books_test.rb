@@ -14,8 +14,13 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on "New Book"
 
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/test/system/books_test.rb
     fill_in "Published year", with: @book.Published_year
     fill_in "Title", with: @book.Title
+=======
+    fill_in "Published year", with: @book.published_year
+    fill_in "Title", with: @book.title
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/test/system/books_test.rb
     click_on "Create Book"
 
     assert_text "Book was successfully created"
@@ -26,8 +31,13 @@ class BooksTest < ApplicationSystemTestCase
     visit books_url
     click_on "Edit", match: :first
 
+<<<<<<< HEAD:Rakhi/Assignment2-foreignkey/test/system/books_test.rb
     fill_in "Published year", with: @book.Published_year
     fill_in "Title", with: @book.Title
+=======
+    fill_in "Published year", with: @book.published_year
+    fill_in "Title", with: @book.title
+>>>>>>> e119317a0f623e0eae36b8312c36026beb434c37:Nirmala/assignment2/test/system/books_test.rb
     click_on "Update Book"
 
     assert_text "Book was successfully updated"
