@@ -11,7 +11,9 @@
 
 <h1><center>Assignment3 - Chat Application</center><h1>
 
-Chat: <span id=" chat"></span>
+Chat:
+<br>
+<span id=" chat"></span>
 <hr>
 
 Message:
@@ -23,9 +25,18 @@ Message:
 
 <script>
   $(document).ready(function(){
+
+      /*Recieved msg */
+      App.Chat.received = function(data)
+      {
+          $("#chat").append.(data['message'])
+      }
+
       $("send").click(function(){
         msg = $("msg").val()
-        alert(msg)
+
+        /* send msg */
+        App.Chat.send_msg(msg)
       })
   })
   </script>
