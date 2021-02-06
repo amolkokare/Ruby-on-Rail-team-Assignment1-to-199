@@ -76,3 +76,7 @@ gem 'simple_form'  #flexible as possible while helping
 gem 'redis' #Redis is an open source (BSD licensed), in-memory data structure store,
 #used as a database, cache, and message broker.
 #####################################################################
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.2'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
