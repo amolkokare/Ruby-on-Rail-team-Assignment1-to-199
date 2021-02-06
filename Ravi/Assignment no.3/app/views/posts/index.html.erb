@@ -1,0 +1,35 @@
+<%# Home page title %>
+<div>
+  <h1 align="center">Simple Chat APP</h1>
+</div>
+
+<%# Check if there are any posts %>
+<% if @posts.empty? %>
+  <%# If the posts array is empty, make user aware with a card %>
+  
+      <p >No posts</p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all posts as clickable links %>
+  
+    <%# A fully-disabled link; used as a header for the list %>
+    
+  	  <span>Posts:</span>
+    </a>
+    <%# Goes thru each post and creates a clickable list-group-item link %>
+    <% @posts.each do |post| %>
+      <%= link_to post.title, post %>
+    <% end %>
+  </div>
+<% end %>
+
+<%# New post form rendered in a card %>
+
+  	<p>New post</p>
+  </div>
+  
+    <%# Needs a blank Post instance to create the form, so create it and pass it in %>
+    <%= render "form", post: Post.new %>
+  </div>
+</div>
