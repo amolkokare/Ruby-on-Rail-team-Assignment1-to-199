@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.7.2'
+ruby '2.7.2'  # this is my ruby version
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.1.1'
@@ -63,8 +63,16 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Rails tutorial gems
 ################################################################################
 
-gem 'devise'
-gem 'bootstrap', '~> 4.3.1'
+gem 'devise'     #used for user-authentication, it create sign-up and sign-in.
+#It also can be used to create user account for privacy.
+#############################################################################
+gem 'bootstrap', '~> 4.3.1' # used for bootstrap set up.
+############################################################################
 gem 'jquery-rails'
-gem 'simple_form'
-gem 'redis'
+############################################################################
+gem 'simple_form'  #flexible as possible while helping
+# you with powerful components to create your forms.
+########################################################################
+gem 'redis' #Redis is an open source (BSD licensed), in-memory data structure store,
+#used as a database, cache, and message broker.
+#####################################################################
