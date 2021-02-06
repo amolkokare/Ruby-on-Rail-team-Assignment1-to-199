@@ -1,0 +1,45 @@
+<%# Display the post and give the option to edit and delete it %>
+
+  	<%= @post.title %>
+  </div>
+  
+    <p ><%= simple_format(@post.body) %></p>
+    <div>
+	  <%= link_to "Edit", edit_post_path(@post)%>
+	  <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+	</div>
+  </div>
+</div>
+
+<%# Check if there are any replies for this post %>
+<% if @post.replies.empty? %>
+  <%# If the replies array is empty, make user aware with a card %>
+ 
+    
+      <p >No replies...</p>
+    </div>
+  </div>
+<% else %>
+  <%# If there are replies, display all the replies %>
+  
+      <p>Replies:</p>
+    </div>
+  </div>
+  <%# Renders each reply one by one using the partial expansion feature %>
+  <%# It's like rendering replies/_reply.html.erb with each reply as the param %>
+  <%= render @post.replies %>
+<% end %>
+
+<%# New reply form rendered in a card %>
+
+  	<p>New reply</p>
+  </div>
+  
+    <%= render "replies/form" %>
+  </div>
+</div>
+
+<%# Adds a back button at the bottom that takes user back to root page %>
+
+  <%= link_to "Back", root_path %>
+</div>

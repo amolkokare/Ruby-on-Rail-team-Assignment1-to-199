@@ -1,0 +1,11 @@
+<%# Create a form for post that has placeholders %>
+<%= form_with model: post do |form| %>
+  <div>
+  	<%= form.text_field :title,placeholder: "Subject" %>
+  	<%= form.text_area :body, placeholder: "Body", rows: "5" %>
+  </div>
+
+  <div >
+  	<%= form.submit "Submit" %>
+  </div>
+<% end %>
