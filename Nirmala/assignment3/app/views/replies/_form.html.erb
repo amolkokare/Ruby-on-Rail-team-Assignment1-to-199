@@ -1,0 +1,10 @@
+<%# Create a reply form for a specific post, with placeholders %>
+<%= form_with model: [@post, @post.replies.build] do |form| %>
+ 
+  	<%= form.text_field :name,placeholder: "Name" %><br><br>
+  	<%= form.text_area :body, placeholder: "Body", rows: "5" %><br><br>
+  
+  
+  	<%= form.submit "Submit", class: "btn btn-success" %>
+  
+<% end %>
