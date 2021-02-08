@@ -1,0 +1,59 @@
+<%# Home page title %>
+
+
+<div   
+class= "card text-center -dark bg-secondary">
+
+  <div class="card-header">
+
+ </div>
+<div>
+ <img src="https://icons.iconarchive.com/icons/custom-icon-design/pretty-office-12/64/SMS-Message-icon.png"></img>
+  
+  <h1 align="center" style="color:white ">Sms Wall</h1>
+
+
+
+
+
+  
+  
+</div>
+ </div>
+
+<%# Check if there are any posts %>
+<% if @posts.empty? %>
+  <%# If the posts array is empty, make user aware with a card %>
+  
+      <p >No posts</p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all posts as clickable links %>
+  
+    <%# A fully-disabled link; used as a header for the list %>
+    <div align="center" style="color:green " >
+  	  <span>Posts:</span>
+    </a>
+
+    <%# Goes thru each post and creates a clickable list-group-item link %>
+    <% @posts.each do |post| %>
+      <%= link_to post.title, post %>
+    <% end %>
+  </div>
+  </div>
+
+<% end %>
+
+<%# New post form rendered in a card %>
+
+  	<p align="center" style="color:blue ">New post</p>
+  </div>
+  
+    <%# Needs a blank Post instance to create the form, so create it and pass it in %>
+    <div align="center" >
+    <%= render "form", post: Post.new %>
+  </div>
+</div>
+
+
