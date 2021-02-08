@@ -1,0 +1,45 @@
+<%# Home page title %>
+
+<div class="topnav">
+  <a href="#contact">Log out</a>
+  <a href="#news">Sign in</a>
+
+  <a href="#contact">Sign Up</a>
+  
+</div>
+
+  <marquee width="100%"><h1>Message App</h1></marquee>
+<%# Check if there are any posts %>
+<% if @posts.empty? %>
+  <%# If the posts array is empty, make user aware with a card %>
+
+      <p ><h3>No posts</h3></p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all posts as clickable links %>
+
+    <%# A fully-disabled link; used as a header for the list %>
+    <div align="center" style="color:green " >
+  	  <span><h3>Who is Post:</h3></span>
+    </a>
+
+    <%# Goes thru each post and creates a clickable list-group-item link %>
+    <% @posts.each do |post| %>
+      <%= link_to post.title, post %>
+    <% end %>
+  </div>
+  </div>
+
+<% end %>
+
+<%# New post form rendered in a card %>
+      <div align="center" style="color:green " >
+  	<p><h3>New post</h3></p>
+  </div>
+
+    <%# Needs a blank Post instance to create the form, so create it and pass it in %>
+    <div align="center" >
+    <%= render "form", post: Post.new %>
+  </div>
+</div>
