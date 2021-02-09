@@ -1,6 +1,6 @@
 <%# Home page title %>
-<div>
-  <h1 align="center">Simple Chat APP</h1>
+<div style="background-color:#e6e6e6; height:125px; width:1000px;text-align:center;"><br>
+  <h1 style="color:#4d4dff; font-size:30px">Simple Chat APP</h1>
 </div>
 
 <%# Check if there are any posts %>
@@ -15,7 +15,7 @@
   
     <%# A fully-disabled link; used as a header for the list %>
     
-  	  <span>Posts:</span>
+  	  <span style="color:#a64dff; font-size:20px;  font-weight: 900;">Posts:</span>
     </a>
     <%# Goes thru each post and creates a clickable list-group-item link %>
     <% @posts.each do |post| %>
@@ -26,7 +26,7 @@
 
 <%# New post form rendered in a card %>
 
-  	<p>New post</p>
+  	<p style="color:#ff794d  ; font-size:20px;  font-weight: 900;">New post</p>
   </div>
   
     <%# Needs a blank Post instance to create the form, so create it and pass it in %>

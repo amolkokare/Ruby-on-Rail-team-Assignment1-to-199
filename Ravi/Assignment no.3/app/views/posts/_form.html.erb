@@ -1,11 +1,41 @@
 <%# Create a form for post that has placeholders %>
 <%= form_with model: post do |form| %>
-  <div>
-  	<%= form.text_field :title,placeholder: "Subject" %>
-  	<%= form.text_area :body, placeholder: "Body", rows: "5" %>
+ 
+<div style="text-align:center;">
+  	<%= form.text_field :title,:size=>"18",placeholder: "Subject", :style=> 'width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;'%>
+  	</div>
+  	<br>
+  	<div style="text-align:center;">
+  	<%= form.text_area :body, placeholder: "Body", rows: "7",:style=> 'width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;' %>
   </div>
-
-  <div >
-  	<%= form.submit "Submit" %>
+  <br>
+  <div>
+  <div style='text-align:center;
+  ;
+ 
+  
+ '>
+  	<%= form.submit "Post Message", :style => 'background-color: #4CAF50; 
+        color:white; 
+  	    padding: 14px 20px;
+  	    margin: 8px 0;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer; '%>
+        	
+        </div>
+  </div>
   </div>
 <% end %>
