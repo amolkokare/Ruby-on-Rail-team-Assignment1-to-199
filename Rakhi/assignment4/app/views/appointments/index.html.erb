@@ -1,0 +1,33 @@
+<%# Check if there are any appointments %>
+<% if @appointments.empty? %>
+  <%# If the appointments array is empty, make user aware with a card %>
+  <div class="card w-75 mx-auto mb-5 mt-3">
+    <div class="card-header text-center">
+      <p class="card-text" style="color:green;"><h3>No appointments</h3></p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all appointments as clickable links %>
+  <div class="card bg-light mb-5 mt-3">
+    <div class="card-header text-center "style="color:darkgreen;">
+      Scheduled Appointments
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <%# Goes thru each appointment and creates a clickable list-group-item link %>
+        <% @appointments.each_with_index do |appointment, i| %>
+          <%= link_to ((i + 1).to_s + " : " + appointment.doctor.name + " => " + appointment.patient.name), appointment, class: "list-group-item list-group-item-action list-group-item-light" %>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<div>
+  <div class="card-header text-center" style="color:red;">
+  	<b>New Appointment</b>
+  </div>
+  <div class="card-body">
+    <%= render "form", appointment: Appointment.new %>
+  </div>
+</div>

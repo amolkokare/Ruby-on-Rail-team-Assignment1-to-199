@@ -1,0 +1,33 @@
+<%# Check if there are any doctors %>
+<% if @doctors.empty? %>
+  <%# If the doctors array is empty, make user aware with a card %>
+  <div class="card w-75 mx-auto mb-5 mt-3">
+    <div class="card-header text-center">
+      <p class="card-text" style="color:red;">No doctors added</p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all doctors as clickable links %>
+  <div class="card bg-light mb-5 mt-3">
+    <div class="card-header text-center" style="color:green;">
+    <h3>  Available Doctors</h3>
+    </div>
+    <div class="card-body">
+      <ul class="list-group">
+        <% @doctors.each do |doctor| %>
+          <%= link_to doctor.name, doctor, class: "list-group-item list-group-item-action list-group-item-light" %>
+
+        <% end %>
+      </ul>
+    </div>
+  </div>
+<% end %>
+
+<div class="card bg-light mb-3">
+  <div class="card-header text-center" style="color:black;">
+  	<h3>Add Doctor</h3>
+  </div>
+  <div class="card-body">
+    <%= render "form", doctor: Doctor.new %>
+  </div>
+</div>
