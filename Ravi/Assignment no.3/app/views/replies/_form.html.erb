@@ -2,9 +2,9 @@
 <%= form_with model: [@post, @post.replies.build] do |form| %>
  
   	<%= form.text_field :name,placeholder: "Name" %>
-  	<%= form.text_area :body, placeholder: "Body", rows: "5" %>
+  	<%= form.text_area :body, placeholder: "Message", rows: "5" %>
   
   
-  	<%= form.submit "Submit" %>
+  	<%= form.submit "Reply"%>
   
 <% end %>
