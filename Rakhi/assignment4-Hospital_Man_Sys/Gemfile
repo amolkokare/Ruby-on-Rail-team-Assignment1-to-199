@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 
 ruby '2.7.2'  # This is ruby version.
 
@@ -27,7 +27,7 @@ end
 
 group :development do
   gem 'web-console', '>= 4.1.0'  #Web Console is a debugging tool for your Ruby on Rails applications.
-  gem 'rack-mini-profiler', '~> 2.0' #indicator to the top left corner of the page with the total
+  #gem 'rack-mini-profiler', '~> 2.0' #indicator to the top left corner of the page with the total
   #loading time displayed in it. Click on the indicator.
 
 end
