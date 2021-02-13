@@ -1,0 +1,81 @@
+<%# Add dynamic class to div based on first type name which colors background %>
+<div class="pokedex-inner <%= @pokemon[:types][0].downcase %>">
+  <div class="pokedex-entry-screen">
+
+    <div class="poke-header">
+      <div class="poke-header-top">
+        <div class="poke-header-left">
+          <div class="poke-header-name">
+            <%= @pokemon[:name] %>
+          </div>
+          <div class="poke-header-types">
+            <% @pokemon[:types].each do |type| %>
+              <div class="poke-type">
+                <%= type %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+        <div class="poke-header-right">
+          <div class="poke-header-num">
+            <%= @pokemon[:num] %>
+          </div>
+        </div>
+      </div>
+      <div class="poke-header-bottom">
+        <div class="poke-sprite">
+          <img src="<%= @pokemon[:sprite] %>">
+        </div>
+      </div>
+    </div>
+
+    <div class="poke-body">
+      <div class="poke-info-item">
+        <div class="poke-info-title">
+          Height
+        </div>
+        <div class="poke-info-desc">
+        <%= @pokemon[:height] %>
+        </div>
+      </div>
+      <div class="poke-info-item">
+        <div class="poke-info-title">
+          Weight
+        </div>
+        <div class="poke-info-desc">
+        <%= @pokemon[:weight] %>
+        </div>
+      </div>
+      <div class="poke-info-item">
+        <div class="poke-info-title">
+          Capacity
+        </div>
+        <div class="poke-info-desc">
+          <%= @pokemon[:abils] %>
+        </div>
+      </div>
+      <div class="poke-info-item">
+        <div class="poke-info-title">
+          Held Items
+        </div>
+        <div class="poke-info-desc">
+          <%= @pokemon[:items] %>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="poke-footer btn-group">
+      <%= link_to pokemon_path(:id => (params[:id].to_i - 1).to_s), class: "btn btn-secondary border-dark #{ params[:id] == '1' ? 'disabled' : '' }" do %>
+        <i class="bi bi-caret-left"></i>
+      <% end %>
+      <%= link_to root_path, class: "btn btn-secondary border-dark" do %>
+        <i class="bi bi-house"></i>
+      <% end %>
+      <%= link_to pokemon_path(:id => (params[:id].to_i + 1).to_s), class: "btn btn-secondary border-dark" do %>
+        <i class="bi bi-caret-right"></i>
+      <% end %>
+    </div>
+
+  </div>
+</div>
