@@ -14,7 +14,7 @@ gem 'jquery-rails' #This gem provides jQuery and
 gem 'turbolinks', '~> 5.x' #Turbolinks makes following links in your
 #web application faster (use with Rails Asset Pipeline)
 gem 'jbuilder', '~> 2.0' #Create JSON structures via a Builder-style DSL
-
+ gem 'wdm', '>= 0.1.0'
 
 group :development, :test do
   gem 'byebug', platform: :mri
