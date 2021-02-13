@@ -1,45 +1,57 @@
-<%= form_with(model: appointment) do |form| %>
-  <% if appointment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+<%# Create a form for appointment that has placeholders %>
+<div style="border-style: solid;
+  border-width: 1px;">
+</br>
 
-      <ul>
-        <% appointment.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
+<%= form_with model: appointment do |form| %>
+  
+    <div style="text-align: center;" >
+        <%= form.collection_select :patient_id, Patient.all, :id, :name, {prompt: "Select Patient"} , :class=>"mb-3"%>
 
-  <div class="field">
-    <%= form.label :date %>
-    <%= form.date_select :date %>
+        <%= form.collection_select :doctor_id, Doctor.all, :id, :name, {prompt: "Select Doctor"} %>
+        </div>
+<br>
+
+<div style="text-align: center;">
+
+<span>Date</span>
+        <%= form.date_field :date%>
+
+</div>
+</br>
+
+<div style="text-align: center;">
+<span>Start Time</span>
+        <%= form.time_field :start_time%>
+</div>
+</br>
+<div style="text-align: center;">
+      
+     
+        <span>End Time</span>
+        <%= form.time_field :end_time %>
+      </div>
+    </br>
+    
+    <div style="text-align: center;">
+    <%= form.text_area :issue, placeholder: "Describe issue", rows: "5" %>
   </div>
+</br>
+<div style="text-align: center;">
 
-  <div class="field">
-    <%= form.label :date %>
-   
-
-    <%= collection_select(:appointment, :patient_id, Patient.all, :id,:name, prompt: true)%>
+    <%= form.submit "Submit", :class => "btn btn-info btn-sm bg-primary text-wrap text-white"%>
   </div>
-  </div>
-
-  <div class="field">
-    <%= form.label :time %>
-    <%= form.time_select :time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :time %>
-    <%= form.time_select :time %>
-  </div>
-
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_field :body %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+</div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
