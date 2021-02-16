@@ -15,12 +15,13 @@ body
 
   font-family: sans-serif;
 }
-
+//******************** css code for menu-bar ***************************
 .menu-bar
 {
   background: rgb(0,100,0);
-  text-align: center;
+  text-align: right;
 }
+//******************** css code for menu-bar ul ************************
 .menu-bar ul
 {
   display: inline-flex;
@@ -29,9 +30,9 @@ body
 }
 .menu-bar ul li
 {
-  width: 90px;
-  margin: 10px;
-  padding: 10px;
+  width: 70px;
+  margin: 7px;
+  padding: 7px;
 }
 .menu-bar ul li a
 {
@@ -52,8 +53,8 @@ body
   display: block;
   position: absolute;
   background: rgb(0,100,0);
-  margin-top: 15px;
-  margin-left: -15px;
+  margin-top: 10px;
+  margin-left: -10px;
 }
 .menu-bar ul li:hover .sub-menu-1 ul
 {
@@ -62,10 +63,90 @@ body
 }
 .menu-bar ul li:hover .sub-menu-1 ul li
 {
-  width: 150px;
-  padding: 10px;
+  width: 130px;
+  padding: 3px;
   border-bottom: 1px dotted #fff;
-  background: transparent;
-  border-radius: 0;
+  //background: transparent;
+  //border-radius: 0;
   text-align: left;
 }
+//****************** css code for sign-up form **********************
+.sign-up-form
+{
+  width: 300px;
+  box-shadow: 0 0 3px 0 rgba(0,0,0,0.3);
+  background: #fff;
+  padding: 20px;
+  margin: 8% auto 0;
+}
+//****************** css for sign-up form h1 *************************
+.sign-up-form h1
+{
+  color: #1c8adb;
+  margin-bottom: 30px;
+}
+//******************* css code for input-box *************************
+.input-box
+{
+  border-radius:20px;
+  padding: 10px;
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid #999;
+  outline: none;
+
+}
+//****************** css code for button ****************************
+.button
+{
+  color: #fff;
+  width: 100%;
+  padding: 10px;
+  border-radius: 20px;
+  font-size: 15px;
+  margin: 10px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+//************************ signup-btn code css ************************
+.signup-btn
+{
+  background-color: #1c8adb;
+
+}
+//************************* gmail-btn code css ***********************
+.gmail-btn
+{
+  background-color: #21afde;
+}
+//************************ css code for hr *****************************
+hr
+{
+  margin-top: 20px;
+  width: 80%
+}
+//****************** css code for or text ***************************
+.or
+{
+  background: #fff;
+  width: 30px;
+  margin: -19px auto 10px;
+
+}
+//***************** css code for sign up image in signup form **********************
+img
+{
+  width: 70px;
+  margin-top: -50px;
+}
+//***************** css code for social-icons in contact form*************************
+.social-icons
+{
+  top: 50%
+  //transform: translateY(-50%);
+  //position: sticky;
+  //z-index: 1;
+  //width: 80px;
+}
+//*****************Photo gallery css ***********************************
