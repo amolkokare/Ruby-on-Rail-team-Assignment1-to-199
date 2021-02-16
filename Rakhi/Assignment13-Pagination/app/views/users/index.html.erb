@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+<header>
+  <h1 id="Pagination"><center><p style="color:blue;">Assignment No-13 Pagination</p></center></h1>
+
+</header>
+
+<h1 id="Users Information"><center><p>&#128509;</p>Users Information</center></h1>
+<style>
+        table, th, td {
+           border: 1px solid black;
+        }
+     </style>
+<table class='table table-condensed table-hover' >
+
+  <thead>
+    <tr>
+    <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>City</th>
+      <th>State</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody id='users'>
+    <%= render @users %>
+  </tbody>
+</table>
+<%= paginate @users %>
+<br>
+
+<%= link_to 'New User', new_user_path %>
+
+<footer>
+
+<h1 id="Pagination"><center><p style="color:red;"><marquee behavior="scroll" direction="left"><p style="font-size:50px;">
+Here, Pagination is Done.......</p></marquee</p></center></h1></p>
+
+</footer>

@@ -1,0 +1,36 @@
+<%# Display the doctor and give the option to edit and delete it %>
+<div class="card w-50 mt-5 mb-5 mx-auto">
+  <div class="card-header fs-5 fw-bold py-3">
+  	<%= @doctor.name %>
+  </div>
+  <div class="card-body">
+    <dl class="row">
+      <dt class="col-sm-2 text-nowrap">Specialty:</dt>
+      <dd class="col-sm-10"><%= @doctor.specialty %></dd>
+    </dl>
+    <div class="ms-2">
+	  <%= link_to "Edit", edit_doctor_path(@doctor), class: 'btn btn-secondary' %>
+	  <%= link_to "Delete", doctor_path(@doctor), method: :delete, data: { confirm: "Are you sure?" }, class: 'btn btn-danger' %>
+	</div>
+  </div>
+</div>
+
+<%# Check if there are any appointments %>
+<% if @doctor.appointments.empty? %>
+  <%# If the appointments array is empty, make user aware with a card %>
+  <div class="card w-75 mx-auto mb-2">
+    <div class="card-header text-center">
+      <p class="card-text">No appointments scheduled...</p>
+    </div>
+  </div>
+<% else %>
+
+  <div>
+    <div class="card-header text-center">
+  <h3> Scheduled Appointments</h3>
+    </div>
+        <% @doctor.appointments.each_with_index do |appointment, i| %>
+          <%= link_to ((i + 1).to_s + " : " + appointment.date.strftime("%m/%d/%Y") + " -> " + appointment.patient.name), appointment, class: "list-group-item list-group-item-action list-group-item-light" %>
+        <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,36 @@
+
+#
+# Configure Using Gemfile
+# gem 'pg'
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+
+  adapter: postgresql
+  encoding: unicode
+  database: hospital_development
+  pool: 1
+  username: rakhi
+  password: 123456
+
+
+test:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: hospital_test
+  pool: 1
+  username: rakhi
+  password: 123456
+
+
+production:
+  <<: *default
+  database: hospital_production
+  username: myapp
+  password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>

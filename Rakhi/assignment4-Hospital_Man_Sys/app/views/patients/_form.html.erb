@@ -1,0 +1,17 @@
+<%# Create a form for doctor that has placeholders %>
+<%= form_with model: patient do |form| %>
+  <div>
+    <%= form.text_field :name, placeholder: "Name" %>
+               <%= form.label:dob, "Date_of_Birth" %>
+	                   <%= form.date_field :dob %>
+	</div>
+
+    <div class="form-check pt-2">
+      <%= form.check_box :is_insured %>
+      <%= form.label :is_insured, "Patient Insured?" %>
+    </div>
+
+  <div class="form-group">
+    <%= form.submit "Submit", class: "btn btn-success mb-3" %>
+  </div>
+<% end %>
