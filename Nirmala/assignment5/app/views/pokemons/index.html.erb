@@ -1,0 +1,24 @@
+<div> <p class="text-center" style="color:blue">POKEMON HOUSE</p></div>
+
+      <div style="width: 400px;  margin: 0 auto; background: #5B84B1; color: white;">
+  <%= image_tag(@poke_data["sprites"]["front_default"]) %><br>
+  <%= @res["results"][0]["name"].capitalize %>
+
+<%= link_to "⏮️", pokemons_path(page: @page - 1)%>
+<%= link_to "⏭️", pokemons_path(page: @page + 1)%><br>
+
+
+ 
+ <b> Hp:</b> <%= @poke_data["stats"][5]["base_stat"]%><br>
+ <b>Attack:</b> <%= @poke_data["stats"][4]["base_stat"] %><br>
+ <b>Defense:</b> <%= @poke_data["stats"][3]["base_stat"] %><br>
+ <span><b> Abilities:</b> </span>
+ <% @poke_data["abilities"].each do |ability| %>
+   <span class="details"><%= ability["ability"]["name"]%> </span>
+   <% end %>
+   
+ </div>
+</div>
+
+ 
+
