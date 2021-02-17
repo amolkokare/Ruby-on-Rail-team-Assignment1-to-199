@@ -3,10 +3,10 @@ Rails.application.routes.draw do
   get 'startup/index'
 
     resources :startup, :signup, :contact, :gallery
-    resource :signup
-      
+    #resource :signup
 
-root :to => 'signup#index'
+
+#root :to => 'signup#index'
 
   #devise_for :users
   #resources :users
