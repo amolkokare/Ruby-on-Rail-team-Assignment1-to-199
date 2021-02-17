@@ -13,19 +13,3 @@
  *= require_tree .
  *= require_self
  */
-
-.pokedex-outer {
-  width: 600px;
-  height: 700px;
-  border-radius: 5%;
-
-  padding: 20px;
-
-}
-
-.pokedex-middle {
-  width: 80%;
-  height: 80%;
-  background: pink;
-  padding: 4px;
-}
