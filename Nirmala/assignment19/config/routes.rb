@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'video/index'
-  resources :books
-  
+  devise_for :users
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-
+resources :messages do
+	resources :comments
+end
+root 'messages#index'
 end

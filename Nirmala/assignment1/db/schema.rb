@@ -10,11 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_01_110447) do
+ActiveRecord::Schema.define(version: 2021_02_19_053333) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
-    t.datetime "published_year"
+    t.integer "published_year"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "videos", force: :cascade do |t|
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

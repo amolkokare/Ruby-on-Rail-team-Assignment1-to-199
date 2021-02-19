@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Espm</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  </head>
+
+  <body>
+<nav class="navbar navbar-default navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+   <div class="navbar-header">
+    <%= link_to "NEWS HACKER PAGE", root_path, class: "navbar-brand" %>
+     </div>
+     <ul class="navbar-nav nav navbar-right">
+          <% if user_signed_in? %>
+          <li><%= link_to "Sign_out", destroy_user_session_path, method: :delete %>
+          </li>
+          <% else %>
+          <li><%= link_to "Log In", new_user_session_path %></li>
+
+         <li><%= link_to "Sign Up", new_user_registration_path %></li>
+      <% end %> 
+      </ul>
+      <% if user_signed_in? %>
+
+      <p><%= link_to "Post It", new_message_path, class: "navbar-text navbar-link" %> </p>
+      <% end %> 
+      </div>
+     </nav>
+     <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+
+       <div class="container-fluid">
+       
+    <%= yield %>
+  </div>
+  </body>
+</html>
