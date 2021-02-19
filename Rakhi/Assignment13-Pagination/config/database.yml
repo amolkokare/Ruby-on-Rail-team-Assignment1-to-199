@@ -26,7 +26,7 @@ development:
 
   adapter: postgresql
   encoding: unicode
-  database: pagination_development
+  database: pagination2_development
   pool: 1
   username: rakhi
   password: 123456
@@ -65,7 +65,7 @@ test:
   <<: *default
   adapter: postgresql
   encoding: unicode
-  database: pagination_test
+  database: pagination2_test
   pool: 1
   username: rakhi
   password: 123456
@@ -92,6 +92,6 @@ test:
 #
 production:
   <<: *default
-  database: pagination_production
+  database: pagination2_production
   username: myapp
   password: <%= ENV['MYAPP_DATABASE_PASSWORD'] %>
