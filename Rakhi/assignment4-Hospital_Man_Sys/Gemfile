@@ -15,7 +15,7 @@ gem 'jbuilder', '~> 2.7' #generating and rendering JSON responses for API reques
 
 gem 'bootsnap', '>= 1.4.4', require: false #Bootsnap is a library that plugs into Ruby,
                                         #support for active support and yaml.
-
+gem 'jquery-rails'
 group :production do
   gem 'pg', '~> 1.2', '>= 1.2.3'   #database
 end
