@@ -1,0 +1,13 @@
+<%# Render the new/edit post form in a card %>
+
+  	<p>Edit Post</p>
+  </div>
+  <div>
+    <%= render "form", post: @post %>
+  </div>
+</div>
+
+<%# Add a back button that redirects back to the show view for the post %>
+<div>
+  <%= link_to "🔙 ", @post%>
+</div>

@@ -1,0 +1,58 @@
+<%# Display the post and give the option to edit and delete it %>
+
+
+
+
+  <div style="text-align: left; background-color: #D1F7FB  ; padding: 12px 20px;
+  margin: 8px 0;" >
+    <div>
+    <%= image_tag @post.image.url,:style=> 'width:20%;
+    align:center;
+    height:50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;' %>
+ </div>
+
+
+
+
+
+
+
+
+
+
+
+ <label> Post:</label>
+    <p ><%= simple_format(@post.body) %></p>
+    <div>
+    <%= link_to "✏️", edit_post_path(@post)%>
+    <%= link_to "🗑️", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+  </div>
+  </div>
+</div>
+</div>
+
+<div style="text-align: right; padding: 12px 20px;
+  margin: 8px 0;">
+<% if @post.replies.empty? %>
+   <p >No replies...</p>
+     <% else %>
+         <p>Replies:</p>
+             <%= render @post.replies %>
+               <% end %>
+                  <p style="text-align: center;font-family:courier,arial,helvetica;">New reply</p>
+                    <%= render "replies/form" %>
+ 
+                      </div>
+
+
+<%# Adds a back button at the bottom that takes user back to root page %>
+
+  <%= link_to "Back", root_path %>
+  
+</div>
