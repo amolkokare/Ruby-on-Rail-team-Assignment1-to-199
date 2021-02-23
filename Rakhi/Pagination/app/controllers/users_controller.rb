@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.csv { send_data @users.to_csv}
+      format.csv { send_data @users.to_csv(['userfirst_name', 'last_name', 'address', 'phone'])}
   end
 
   # GET /users/1 or /users/1.json

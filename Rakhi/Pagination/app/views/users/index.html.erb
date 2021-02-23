@@ -36,7 +36,8 @@
   </tbody>
 </table>
 <%= paginate @users %>
-<button class="btn success">Export CSV File</button>
+
+<%= link_to "Export CSV File", users_path(format: :csv), class:'btn btn-primary' %>
 <br>
 </div>
 <%= link_to 'New User', new_user_path %>
