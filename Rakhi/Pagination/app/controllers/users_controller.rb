@@ -4,11 +4,10 @@ class UsersController < ApplicationController
   # GET /users or /users.json
   def index
     @users = User.page params[:page]
-    @import = User::Import.new
-
     respond_to do |format|
       format.html
       format.csv { send_data @users.to_csv(['userfirst_name', 'last_name', 'address', 'phone'])}
+   end
   end
 
   # GET /users/1 or /users/1.json
@@ -71,4 +70,4 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:userfirst_name, :last_name, :address, :phone)
     end
-end
+  end

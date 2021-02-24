@@ -1,8 +1,11 @@
 <p id="notice"><%= notice %></p>
-<h2><center>Assignment13-Pagination</center></h2>
+
+<h2 style="background-color:#d5e1df"><center>Assignment13-Pagination</center></h2>
 <h3><center>Users</center></h3>
+<br>
 <div align="center">
-<table>
+  <br>
+<table class="table table-bordered border-primary">
   <thead>
     <style>
         table, th, td {
@@ -27,9 +30,12 @@
         <td><%= user.last_name %></td>
         <td><%= user.address %></td>
         <td><%= user.phone %></td>
-        <td><%= link_to 'Show', user %></td>
-        <td><%= link_to 'Edit', edit_user_path(user) %></td>
-        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user, :class=>"btn btn-info text-white" %></td>
+        <td><%= link_to 'Edit', edit_user_path(user), :class=>"btn btn-success text-white"  %></td>
+
+        <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Are you sure?' }, :class=>"btn btn-danger text-white" %></td>
+
+
       </tr>
     <% end %>
 
@@ -40,4 +46,4 @@
 <%= link_to "Export CSV File", users_path(format: :csv), class:'btn btn-primary' %>
 <br>
 </div>
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'New User', new_user_path, :class => "btn btn-primary btn-sm bg-primary text-wrap text-white" %>

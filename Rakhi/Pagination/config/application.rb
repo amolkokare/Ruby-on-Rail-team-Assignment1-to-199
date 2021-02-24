@@ -1,5 +1,5 @@
 require_relative "boot"
-require 'csv'
+require "csv"
 require "rails/all"
 
 # Require the gems listed in Gemfile, including any gems
@@ -18,6 +18,6 @@ module Ass13Pagination
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
-    config.active_record.raise_in_transactional_callbacks = true
+    #config.active_record.raise_in_transactional_callbacks = true
   end
 end
