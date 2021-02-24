@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<div align="center">
+<p>
+  <strong>Fname:</strong>
+  <%= @user.fname %>
+</p>
+
+<p>
+  <strong>Lname:</strong>
+  <%= @user.lname %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @user.phone %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @user.address %>
+</p>
+
+<%= link_to '✏️', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>
+</div>
