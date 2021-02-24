@@ -3,6 +3,10 @@
   <h1 style="color:#4d4dff; font-size:30px">Simple Chat App</h1>
 </div>
 
+
+<div> <%= link_to 'sign out', destroy_user_session_path, method: :delete %>
+ </div>
+
 <%# Check if there are any posts %>
 <% if @posts.empty? %>
   <%# If the posts array is empty, make user aware with a card %>
