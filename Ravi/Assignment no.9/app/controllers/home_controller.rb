@@ -5,4 +5,16 @@ class HomeController < ApplicationController
   def about
   	
   end
+
+  def gallery
+  end
+
+  def courses
+  end
+
+  def contact
+  end
+
+  def login
+  end
 end

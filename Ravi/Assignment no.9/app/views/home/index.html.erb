@@ -1,10 +1,140 @@
-<div 
-<div class="header">
-	<h1 class="headertext"> Sai Tech Computers </h1>
-   <img src="assets/img/logo.png" class="logo">
+<html>
+<head>
+<style>
+.two:hover {font-size:110%;}
+
+
+
+</style>
+</head>
+
+
+<body>
+<div style="height:140px;width: 100%;border: 1px solid #4CAF50;  background-color: #4b86b4">
+  <div style="float:left; width:30%;">
+    <div>
+      <img src="assets/img/logo.png">
+    </div>
+  </div> 
+  <div style="float:left; width:70%; ">
+    <div>
+    	<br>
+      <h1 style="color: #F2F4F4;font-size:38px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sai Tech Computers </h1>
+    </div>
+  </div>
 </div>
 
 
-<a href="/home/about">About us</a>
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+
+
+<div style="font-size:20px; text-align:right;margin-right:15px;">
+<a href="/home/index" class="two" style="margin-right:15px;">Home</a>
+<a href="/home/about" class="two" style="margin-right:15px;">About us</a>
+<a href="/home/gallery" class="two" style="margin-right:15px;" >Gallery</a>
+
+<a href="/home/courses" class="two" style="margin-right:15px;">Courses</a>
+
+<a href="/home/contact" class="two" style="margin-right:15px;">Contact Us</a>
+
+<a href="/home/login" class="two" style="margin-right:15px;">Login</a>
+
+</div>
+
+
+<div>
+    <script language="JavaScript1.2">
+	//Fade-in image slideshow- By Dynamic Drive
+//For full source code and more DHTML scripts, visit http://www.dynamicdrive.com
+//This credit MUST stay intact for use
+ 
+var slideshow_width='998px' //SET IMAGE WIDTH
+var slideshow_height='550px' //SET IMAGE HEIGHT
+var pause=3000 //SET PAUSE BETWEEN SLIDE (3000=3 seconds)
+ 
+var fadeimages=new Array()
+//SET IMAGE PATHS. Extend or contract array as needed
+fadeimages[0]="assets/img/s4.png"
+fadeimages[1]="assets/img/s5.png"
+fadeimages[2]="assets/img/s6.png"
+
+
+
+
+ var ie4=document.all
+var dom=document.getElementById
+ 
+if (ie4||dom)
+document.write('<div style="position:relative;width:'+slideshow_width+';height:'+slideshow_height+';overflow:hidden"><div  id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div></div>')
+else
+document.write('<img name="defaultslide" src="'+fadeimages[0]+'">')
+ 
+var curpos=10
+var degree=10
+var curcanvas="canvas0"
+var curimageindex=0
+var nextimageindex=1
+ 
+ 
+function fadepic()
+{
+	if (curpos<100)
+	{
+		curpos+=10
+		if (tempobj.filters)
+			tempobj.filters.alpha.opacity=curpos
+		else if (tempobj.style.MozOpacity)
+			tempobj.style.MozOpacity=curpos/100
+	}
+	else
+	{
+		clearInterval(dropslide)
+		nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+		tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+		tempobj.innerHTML='<img src="'+fadeimages[nextimageindex]+'">'
+		nextimageindex=(nextimageindex<fadeimages.length-1)? nextimageindex+1 : 0
+		setTimeout("rotateimage()",pause)
+	}
+}
+ 
+function rotateimage()
+{
+	if (ie4||dom)
+	{
+		resetit(curcanvas)
+		var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+		crossobj.style.zIndex++
+		var temp='setInterval("fadepic()",50)'
+		dropslide=eval(temp)
+		curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+	}
+	else
+		document.images.defaultslide.src=fadeimages[curimageindex]
+		curimageindex=(curimageindex<fadeimages.length-1)? curimageindex+1 : 0
+}
+ 
+function resetit(what)
+{
+	curpos=10
+	var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+	if (crossobj.filters)
+		crossobj.filters.alpha.opacity=curpos
+	else if (crossobj.style.MozOpacity)
+		crossobj.style.MozOpacity=curpos/100
+}
+ 
+function startit()
+{
+	var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+	crossobj.innerHTML='<img src="'+fadeimages[curimageindex]+'">'
+	rotateimage()
+}
+ 
+if (ie4||dom)
+window.onload=startit
+else
+setInterval("rotateimage()",pause)
+ 
+      </script><br />
+  </div>
+
+
