@@ -4,7 +4,7 @@
     <p><%= simple_format(reply.body) %></p>
     <div>
 
-   <%= link_to 'edit', [reply.post, reply] %>
+  
       
       <%= link_to 'Delete', [reply.post, reply], method: :delete, data: { confirm: "Are you sure?" }%>
    

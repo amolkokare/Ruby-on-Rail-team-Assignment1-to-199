@@ -11,8 +11,8 @@
   </div>
   <%= @res["results"][0]["name"].capitalize %>
 
-<%= link_to "Previous", pokemons_path(page: @page - 1)%>
-<%= link_to "Next", pokemons_path(page: @page + 1)%>
+<%= link_to "Previous", root_path(page: @page - 1)%>
+<%= link_to "Next", root_path(page: @page + 1)%>
 
 
  
