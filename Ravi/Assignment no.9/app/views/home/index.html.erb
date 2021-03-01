@@ -3,23 +3,21 @@
 <style>
 .two:hover {font-size:110%;}
 
-
-
 </style>
 </head>
 
 
 <body>
-<div style="height:140px;width: 100%;border: 1px solid #4CAF50;  background-color: #4b86b4">
-  <div style="float:left; width:30%;">
+<div class="a">
+  <div class="b">
     <div>
       <img src="assets/img/logo.png">
     </div>
   </div> 
-  <div style="float:left; width:70%; ">
+  <div class="c">
     <div>
     	<br>
-      <h1 style="color: #F2F4F4;font-size:38px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sai Tech Computers </h1>
+      <h1 class="d">&nbsp;Sai Tech Computer Institute </h1>
     </div>
   </div>
 </div>
@@ -27,17 +25,19 @@
 
 
 
-<div style="font-size:20px; text-align:right;margin-right:15px;">
-<a href="/home/index" class="two" style="margin-right:15px;">Home</a>
-<a href="/home/about" class="two" style="margin-right:15px;">About us</a>
-<a href="/home/gallery" class="two" style="margin-right:15px;" >Gallery</a>
+<div class="e">
 
-<a href="/home/courses" class="two" style="margin-right:15px;">Courses</a>
 
-<a href="/home/contact" class="two" style="margin-right:15px;">Contact Us</a>
+<%= link_to "Home", root_path,:class => "f"%>
 
-<a href="/home/login" class="two" style="margin-right:15px;">Login</a>
+<a href="/home/about" class="f">About us</a>
+<a href="/home/gallery" class="f" >Gallery</a>
 
+<a href="/home/courses" class="f">Courses</a>
+
+<a href="/home/contact" class="f">Contact Us</a>
+
+<a href="/home/login" class="f">Login</a>
 </div>
 
 
@@ -136,5 +136,47 @@ setInterval("rotateimage()",pause)
  
       </script><br />
   </div>
+
+
+<div class="gallery">
+  <a target="_blank" href="img_5terre.jpg">
+    <img src="assets/img/se1.png">
+  </a>
+  <div class="desc">Software Programming</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_forest.jpg">
+    <img src="assets/img/se2.jpg">
+  </a>
+  <div class="desc">Animation Courses</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_lights.jpg">
+    <img src="assets/img/se3.jpg" >
+  </a>
+  <div class="desc">Hardware and Networking</div>
+</div>
+
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="assets/img/se4.jpg">
+  </a>
+  <div class="desc">Graphics Designing</div>
+</div>
+<div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="assets/img/se5.jpg">
+  </a>
+  <div class="desc">Web Designing</div>
+</div>
+  <div class="gallery">
+  <a target="_blank" href="img_mountains.jpg">
+    <img src="assets/img/se6.jpg">
+  </a>
+  <div class="desc">Auto CAD</div>
+
+</div>
 
 
