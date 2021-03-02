@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+<%= link_to "Export CSV", revenues_path(format: :csv),class: 'btn btn-info' %> 
+<h1>Revenues</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Item</th>
+      <th>Total sales</th>
+      <th>Quantity</th>
+       <th>addition</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% running_total = 0 %>
+    <% @revenues.each do |revenue| %>
+      <tr>
+        <td><%= revenue.item %></td>
+        <td><%= revenue.total_sales %></td>
+        <td><%= revenue.quantity %></td>
+
+       
+        <td><%= number_to_currency(revenue.quantity * revenue.total_sales / 100) %></td>
+
+        <td><%= link_to 'Show', revenue %></td>
+        <td><%= link_to 'Edit', edit_revenue_path(revenue) %></td>
+        <td><%= link_to 'Destroy', revenue, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Revenue', new_revenue_path %>
