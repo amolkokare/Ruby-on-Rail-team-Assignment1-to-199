@@ -1,18 +1,43 @@
-.logo{
-  
-  
-  padding: 5px;
-  height: 70%;
-  width: 11%;
-  align-self: center;
-  
-}
-.header
-{
-	height: 151px;
+.a{
+	height:140px;
 	width: 100%;
-	background-color: #adcbe3;
+	border: 1px solid #4CAF50;
+	background-color: #4b86b4;
 }
-.headertext{
-	text-align: center;
+
+.b{
+
+	float:left; 
+	width:30%;
 }
+
+.c{
+	float:left; 
+	width:70%;
+}
+
+.d{
+
+	color: #F2F4F4;
+	font-size:38px;
+}
+
+.e{
+
+    font-size:20px;
+    text-align:right;
+    margin-right:15px;
+
+}
+
+.f{
+	margin-right:15px;
+	font-size: 20px;
+}
+
+
+
+
+
+
+
