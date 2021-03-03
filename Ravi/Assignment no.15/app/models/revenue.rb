@@ -1,7 +1,7 @@
 class Revenue < ApplicationRecord
 	
 	def self.to_csv
-    attributes = %w{item quantity totalsales addition}
+    attributes = %w{item quantity totalsales percentage}
     CSV. generate(headers: true) do |csv|
       csv << attributes
       all.each do |revenue|
