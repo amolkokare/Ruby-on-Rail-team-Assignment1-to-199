@@ -1,0 +1,25 @@
+
+<div align="center">
+
+  	          <h3><User name:><%= @post.title %></h3>
+            <h1 style="border:orange; border-width:2px; border-style:solid;">
+              <p><%= simple_format(@post.body) %></p></h1>
+    <div>
+	          <%= link_to "Edit", edit_post_path(@post)%>
+
+
+	         <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" } %>
+	</div>
+
+            <% if @post.replies.empty? %>
+<h1 style="border:orange; border-width:1px; border-style:solid;">
+                 <p ><h3>No replies...</h3></p></h1>
+            <% else %>
+            <button type="button" class="btn btn-primary">Reply</button>
+            <%= render @post.replies %>
+      <% end %>
+             <h3>New Reply</h3>
+           <%= render "replies/form" %>
+
+           <%= link_to "Back", root_path %>
+</div>

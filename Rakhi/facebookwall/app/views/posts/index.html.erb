@@ -1,0 +1,75 @@
+<%# Home page title %>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:#ff665b;
+}
+
+.topnav a {
+  float: right;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+</style>
+</head>
+<div class="topnav">
+    <h1><left>Facebook Wall</left></h1>
+  <a href="#contact">Log out</a>
+  <a href="#news">Sign in</a>
+  <a href="#profile">Profile</a>
+  <a href="#">Sign Up</a>
+
+</div>
+
+
+<%# Check if there are any posts %>
+<% if @posts.empty? %>
+  <%# If the posts array is empty, make user aware with a card %>
+
+      <p ><h3>No posts</h3></p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all posts as clickable links %>
+
+    <%# A fully-disabled link; used as a header for the list %>
+    <div align="center" style="color:green " >
+  	  <span><h3>Who is Post:</h3></span>
+    </a>
+
+    <%# Goes thru each post and creates a clickable list-group-item link %>
+    <% @posts.each do |post| %>
+      <%= link_to post.title, post %>
+    <% end %>
+  </div>
+  </div>
+
+<% end %>
+
+<%# New post form rendered in a card %>
+      <div align="center" style="color:green " >
+  	<p><h3>New post</h3></p>
+  </div>
+
+    <%# Needs a blank Post instance to create the form, so create it and pass it in %>
+    <div align="center" >
+    <%= render "form", post: Post.new %>
+  </div>
+</div>

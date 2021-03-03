@@ -1,0 +1,11 @@
+<%# Display the reply with " says:" appended to name; provide delete button %>
+
+    <h6><%= reply.name %> says:</h6>
+    <p><%= simple_format(reply.body) %></p>
+    <div>
+
+   <%= link_to 'edit', [reply.post, reply] %>
+
+  <%= link_to 'Delete', [reply.post, reply], method: :delete, data: { confirm: "Are you sure?" }%>
+
+</div>
