@@ -1,8 +1,8 @@
 <p id="notice"><%= notice %></p>
-
+<div style="text-align: center">
 <h1>Products</h1>
-
-<table>
+</div>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Order</th>
@@ -21,7 +21,7 @@
         <td><%= product.quantity %></td>
         <td><%= product.item %></td>
         <td><%= product.description %></td>
-        <td><%= product.price %></td>
+        <td><%=  number_to_currency(product.price)%></td>
         <td><%= link_to 'Show', product %></td>
         <td><%= link_to 'Edit', edit_product_path(product) %></td>
         <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
@@ -34,6 +34,6 @@
 <h3>Import</h3>
 <%= form_tag import_products_path, multipart: true do %>
   <%= file_field_tag :file %>
-  <%= submit_tag "Upload Products" %>
+  <%= submit_tag "Import" %>
 <% end %>
 <%= link_to 'New Product', new_product_path %>
