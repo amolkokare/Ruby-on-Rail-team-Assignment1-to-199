@@ -3,7 +3,7 @@ class RepliesController < ApplicationController
   	@post = Post.find(params[:post_id])
   	@reply = @post.replies.create(replies_params)
     if @reply.valid?
-  	  redirect_to post_path(@post) 
+  	  redirect_to post_path(@post)
     else
       redirect_to post_path(@post)
     end
@@ -17,12 +17,12 @@ class RepliesController < ApplicationController
   end
 
 
- 
+
 
 
 
   private
   	def replies_params
-  	  params.require(:reply).permit(:name, :body)
+  	  params.require(:reply).permit(:image,:name, :body)
   	end
 end

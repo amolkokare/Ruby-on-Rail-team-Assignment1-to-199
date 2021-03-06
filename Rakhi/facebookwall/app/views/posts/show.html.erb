@@ -1,16 +1,17 @@
 <div style="text-align: left; background-color: #adcbe3; padding: 12px 20px;
 margin: 8px 0;" >
-<%= image_tag @post.image.url,:style=> 'width:20%;
-   align:center;
-   height:50%;
- padding: 12px 20px;
- margin: 8px 0;
- display: inline-block;
- border: 1px solid #ccc;
- border-radius: 4px;
- box-sizing: border-box;' %>
-</div>
-   <h3><User name:><%= @post.title%></h3>
+<div>
+    <%= image_tag @post.image.url,:style=> 'width:20%;
+    align:center;
+    height:50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;' %>
+ </div>
+   
    <p><%= simple_format(@post.body) %></p></h1>
     <div>
 	    <%= link_to "Edit", edit_post_path(@post),  class: "btn btn-success"%>
