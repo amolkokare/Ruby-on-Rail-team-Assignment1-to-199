@@ -1,0 +1,13 @@
+
+
+<%= form_with model: post do |form| %>
+  <div>
+  	<%= form.text_field :title,placeholder: "Sender Name"  %><br><br>
+  	<%= form.text_area :body, placeholder: "Text", columns: "7", maxlength: "15"  %><br><br>
+  </div>
+
+  <div >
+  	<center><%= form.submit "Submit", class: "btn btn-info" %></center>
+  </div>
+
+<% end %>
