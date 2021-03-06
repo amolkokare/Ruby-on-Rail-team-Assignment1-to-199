@@ -1,5 +1,13 @@
 <%# Display the reply with " says:" appended to name; provide delete button %>
-
+<div style="font-size:15px;width:20%;
+ align:center;
+ height:50%;
+padding: 12px 20px;
+margin: 8px 0;
+display: inline-block;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;">
     <h6><%= reply.name %> says:</h6>
     <p><%= simple_format(reply.body) %></p>
     <div>

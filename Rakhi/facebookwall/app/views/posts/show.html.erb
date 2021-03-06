@@ -1,24 +1,28 @@
-
+<div style="text-align: left; background-color: #adcbe3; padding: 12px 20px;
+margin: 8px 0;" >
+ 
+</div>
    <h3><User name:><%= @post.title%></h3>
-
-
    <p><%= simple_format(@post.body) %></p></h1>
     <div>
 	    <%= link_to "Edit", edit_post_path(@post),  class: "btn btn-success"%>
 	    <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" },  class: "btn btn-success" %>
 	  </div>
-<div align="center">
-   <% if @post.replies.empty? %>
-
-      <p><h3>No replies...</h3></p></h1>
-  <% else %>
+    <div align="center">
+      <div style="text-align: right; padding: 12px 20px;
+  margin: 8px 0;">
+      <% if @post.replies.empty? %>
+         <p><h3>No replies...</h3></p></h1>
+      <% else %>
         <button type="button" class="btn btn-primary">Reply</button>
-  <div align="right">
-     <%= render @post.replies %>
+    </div>
+        <div align="right">
+            <%= render @post.replies %>
       <% end %>
-<div align="left">
-             <h3>New Reply....</h3>
+        </div>
+       <div align="left">
+          <h3>New Reply....</h3>
            <%= render "replies/form" %>
            <br>
            <%= link_to "Back", root_path,  class: "btn btn-success" %>
-</div>
+       </div>
