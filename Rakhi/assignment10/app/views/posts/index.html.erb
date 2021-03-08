@@ -1,0 +1,48 @@
+<style>
+body {
+  background-color: coral;
+}
+</style>
+<div class="topnav">
+  <h1 align="left" style="color:black">Facebook Wall</h1>
+</div>
+<div style="text-align: right;font-size: 15px"><b><%= link_to 'Sign up', new_user_registration_path %>
+<div style="text-align: right;font-size: 15px"><b><%= link_to 'Sign out', destroy_user_session_path, method: :delete %></b>
+</div>
+
+
+
+<%# Check if there are any posts %>
+<% if @posts.empty? %>
+  <%# If the posts array is empty, make user aware with a card %>
+
+      <p >No posts</p>
+    </div>
+  </div>
+<% else %>
+  <%# Otherwise, list all posts as clickable links %>
+
+    <%# A fully-disabled link; used as a header for the list %>
+    <div align="center" style="color:green " >
+  	  <span>who is Posts:</span>
+    </a>
+
+    <%# Goes thru each post and creates a clickable list-group-item link %>
+    <% @posts.each do |post| %>
+      <%= link_to post.title, post %>
+    <% end %>
+  </div>
+  </div>
+
+<% end %>
+
+<%# New post form rendered in a card %>
+
+  	<p align="center" style="color:pink "><b>New post</b></p>
+  </div>
+
+    <%# Needs a blank Post instance to create the form, so create it and pass it in %>
+    <div align="center" >
+    <%= render "form", post: Post.new %>
+  </div>
+</div>

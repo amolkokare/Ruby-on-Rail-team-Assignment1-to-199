@@ -1,0 +1,15 @@
+<div style="text-align: center;">
+<div style= 'width:20%;
+    align:center;
+    height:50%;>
+
+
+     <%= form_with model: [@post, @post.replies.build] do |form| %>
+       <%= form.text_area :name,placeholder: "Name" %>
+       <br>
+       <br>
+  	     <%= form.text_area :body, placeholder: "Message", rows: "5", maxlength: "15" %>
+           <%= form.submit "Comment"%>
+              <% end %>
+    </div>
+</div>
