@@ -1,6 +1,8 @@
 class PostsController < ApplicationController
   def index
   	@posts = Post.all
+    @uploader = Post.new.image
+    @uploader.success_action_redirect = new_post_url
   end
 
   def show

@@ -32,7 +32,7 @@ body {
       <%= link_to post.title, post %>
     <% end %>
   </div>
-  </div>
+
 
 <% end %>
 
@@ -45,4 +45,7 @@ body {
     <div align="center" >
     <%= render "form", post: Post.new %>
   </div>
-</div>
+<%= direct_upload_form_for @uploader do |f| %>
+    <p><%= f.file_field :image%></p>
+    <p><%= f.submit "Upload image" %></p>
+<% end %>
