@@ -3,8 +3,16 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all.paginate(page: params[:page], per_page: 2)
+    @users = User.all.paginate(page: params[:page], per_page: 4)
+  
+    respond_to do |format|
+      format.html
+      format.csv { send_data @users.to_csv}
+
   end
+
+  end
+
 
   # GET /users/1 or /users/1.json
   def show

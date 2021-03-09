@@ -1,8 +1,10 @@
 <p id="notice"><%= notice %></p>
 
+
+
 <h1>Users</h1>
 
-<table>
+<table class="table table-success table-striped">
   <thead>
     <tr>
       <th>First name</th>
@@ -27,8 +29,14 @@
     <% end %>
   </tbody>
 </table>
-
+  <br><br>
+<div style="text-align: center;">
+<%= link_to "Export CSV", users_path(format: :csv),class: 'btn btn-info' %></div>
 <br>
 
 <%= link_to 'New User', new_user_path %>
-<%= will_paginate @users %>
+
+
+  <div style="margin-left: 450px">
+   <%= will_paginate @users %>
+  </div>
