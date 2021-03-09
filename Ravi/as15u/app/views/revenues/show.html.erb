@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Item:</strong>
+  <%= @revenue.item %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @revenue.quantity %>
+</p>
+
+<p>
+  <strong>Price per item:</strong>
+  <%= @revenue.price_per_item %>
+</p>
+
+<%= link_to 'Edit', edit_revenue_path(@revenue) %> |
+<%= link_to 'Back', revenues_path %>
