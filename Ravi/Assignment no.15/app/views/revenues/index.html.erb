@@ -1,11 +1,13 @@
 <p id="notice"><%= notice %></p>
 
 
-
+<div style="text-align: center;">
 <%= link_to "Export CSV", revenues_path(format: :csv),class: 'btn btn-info' %>
+
+</div>
 <h1>Revenues</h1>
 
-<table>
+<table class="table table-success table-striped">
   <thead>
     <tr>
       <th>Item</th>

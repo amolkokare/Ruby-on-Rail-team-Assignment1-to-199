@@ -1,0 +1,39 @@
+
+<%= form_with model: post do |form| %>
+<div style="text-align: center;">
+<div style= 'width: 40%;
+  padding: 14px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box; text-align:left;'>
+   <%= form.file_field :image %>
+  </div>
+</div>
+<p>File: <%= @post.image_name %></p>
+<div style="text-align:center;">
+  	<%= form.text_field :title,:size=>"18",placeholder: "Your Name", :style=> 'width: 40%;
+   padding: 14px 20px;
+
+  display: inline-block;
+  border: 2px solid #ccc;'%>
+  	</div>
+  	<br>
+  	<div style="text-align:center;">
+      	<%= form.text_area :body, placeholder: "Text here.......", columns: "12",maxlength:"15", :style=> 'width: 40%;
+       padding: 14px 20px;
+
+      display: inline-block;
+      border: 2px solid #ccc;' %>
+  </div>
+  <br>
+  <div>
+       <div style='text-align:center;'>
+  	    <%= form.submit "Submit", :style => 'background-color: green;
+        color:white;
+  	    padding: 14px 20px;'%>
+       </div>
+  </div>
+
+<% end %>

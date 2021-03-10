@@ -1,0 +1,32 @@
+<%# Display the post and give the option to edit and delete it %>
+  <div style="text-align: left; padding: 12px 20px;
+  margin: 8px 0;" >
+    <div>
+    <%= image_tag @post.image.url,:style=> 'width:20%;
+    align:center;
+    height:40%;
+  padding: 14px 20px;
+  margin: 8px 0;' %>
+ </div>
+ <label><b> Your Message:</b></label>
+    <p ><%= simple_format(@post.body) %></p>
+    <div>
+    <%= link_to "Edit", edit_post_path(@post),  class: "btn btn-success" %>
+    <%= link_to "Delete", post_path(@post), method: :delete, data: { confirm: "Are you sure?" },  class: "btn btn-success" %>
+  </div>
+  </div>
+</div>
+</div>
+
+<div style="text-align: right; padding: 10px 10px;
+  margin: 5px 0;">
+<% if @post.replies.empty? %>
+   <p ><b>No replies...</b></p>
+     <% else %>
+         <p><b>Other Replies:</b></p>
+          <%= render @post.replies %>
+<% end %>
+<b><center>New reply</center></b>
+<%= render "replies/form" %>
+</div>
+<%= link_to "Back", root_path  %>
