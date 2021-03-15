@@ -1,0 +1,18 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Employee_name:</strong>
+  <%= @employee.ename %>
+</p>
+
+<p>
+  <strong>Designation:</strong>
+  <%= @employee.designation %>
+</p>
+<p>
+  <strong>Cname:</strong>
+  <%= @employee.company.cname %>
+</p>
+
+<%= link_to 'Edit', edit_employee_path(@employee),  :class=>"btn btn-secondary" %> |
+<%= link_to 'Back', employees_path,  :class=>"btn btn-primary" %>

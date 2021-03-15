@@ -1,0 +1,5 @@
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: quick_count-test
+  schema_search_path: "quick_count,public"
