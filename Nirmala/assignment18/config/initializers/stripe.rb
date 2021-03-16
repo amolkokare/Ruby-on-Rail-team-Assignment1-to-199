@@ -1,5 +1,5 @@
 Rails.configuration.stripe = {
-	publishable_key: ENV['PUBLISHABLE_KEY'],
-	secret_key: ENV['SECRET_KEY']
+	publishable_key: ENV['pk_test_51IVY4sEIiTWDURwvZfIXzKuM77V7IDxhVM5SBVIP1E3E6qh6jmhQAkVQMzp0tzz3rNcP1gnb7gYDAsjaJYIfHKP800iX8VTWGe'],
+	secret_key: ENV['sk_test_51IVY4sEIiTWDURwv9FG54x8HAZJiG2Gz02x0IN8TzuZx5J5nqDJNeIQzqtqUdGBxhzYqKclHkxi3KgPX1nT1osJ500NtlIznXz']
 }
-Stripe.api_key = Rails.configuration.stripe[:secret_key]
+Stripe.api_key = Rails.configuration.stripe[:sk_test_51IVY4sEIiTWDURwv9FG54x8HAZJiG2Gz02x0IN8TzuZx5J5nqDJNeIQzqtqUdGBxhzYqKclHkxi3KgPX1nT1osJ500NtlIznXz]
