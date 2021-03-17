@@ -23,3 +23,4 @@ Things you may want to cover:
 
 * ...
 https://github.com/amolkokare/Ruby-on-Rail-team-Assignment1-to-199/issues/3#issue-833637468
+![stripe2](https://user-images.githubusercontent.com/74089832/111456222-bb97b000-873c-11eb-9a44-0f0f525a890b.png)
