@@ -1,3 +1,6 @@
+
+<div style="background-color:#faf0e6; height: 800px">
+
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -6,8 +9,14 @@
       </div>
     <% end %>
     <div class='stcker'>
-	<%= image_tag("https://blog.dpogroup.com/wp-content/uploads/2018/12/1-11.png")%>
+      <div style="text-align: center; border-style: double; background:   #b3cde0 ">
+        <br>
+        <br>
+	<%= image_tag("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrFOm70YINgEAICF_GCuP8OX89CoE4rDl8CQ&usqp=CAU")%>
 	
+</div>
+
+
     <div style="text-align: center">
     <label class="amount">
       <span>Amount:</span>
@@ -20,3 +29,4 @@
 </div>
 
 <% end %>
+</div>
