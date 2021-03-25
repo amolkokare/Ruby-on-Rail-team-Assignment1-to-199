@@ -1,0 +1,58 @@
+.a{
+	height:140px;
+	width: 100%;
+	border: 1px solid #4CAF50;
+	background-color: #66b2b2;
+}
+
+.b{
+
+	float:left; 
+	width:30%;
+}
+
+.c{
+	float:left; 
+	width:70%;
+}
+
+.d{
+
+	color: #F2F4F4;
+	font-size:38px;
+}
+
+.e{
+
+    font-size:20px;
+    text-align:right;
+    margin-right:15px;
+
+}
+
+.f{
+	margin-right:15px;
+	font-size: 20px;
+}
+
+
+
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
