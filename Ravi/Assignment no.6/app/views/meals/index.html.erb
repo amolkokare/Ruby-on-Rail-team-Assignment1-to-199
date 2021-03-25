@@ -12,6 +12,11 @@
 <tbody>
 <% @meals.each do |meal| %>
   <td><%= meal.name %></td>
+  <td><img class="col s3" src="<%= meal.thumbnail %>"> </td>
+
+
+
+
   <td><%= meal.quantity %> <%= meal.units %></td>
   <td><%= meal.calories %></span> Calories</td>
    <td>   <%= link_to meal, method: :delete, data: { confirm: 'Are you sure?'} do %>
