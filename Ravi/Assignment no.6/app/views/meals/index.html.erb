@@ -1,0 +1,31 @@
+<h2 style="text-align: center;color: green">Food Calories</h2>
+<hr>
+<table class="table table-striped">
+	<thead>
+		<tr> 
+			<th>Item Name </th>
+		    <th>Quantity </th>
+			<th>Calories</th>
+		</tr>
+
+	</thead>
+<tbody>
+<% @meals.each do |meal| %>
+  <td><%= meal.name %></td>
+  <td><%= meal.quantity %> <%= meal.units %></td>
+  <td><%= meal.calories %></span> Calories</td>
+   <td>   <%= link_to meal, method: :delete, data: { confirm: 'Are you sure?'} do %>
+      <i class="material-icons">Remove</i><td>
+      </tr>
+
+       
+      <% end %>
+    
+ 
+<% end %>
+
+<br>
+
+    <%= render 'form', meal: Meal.new %>
+  </tbody>
+</table>
