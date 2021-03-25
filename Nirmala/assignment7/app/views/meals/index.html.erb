@@ -1,0 +1,45 @@
+    <%= render 'partial/nav' %>
+
+<h2 style="text-align: center;color: green">Meal</h2>
+<hr>
+<table  class="table table-striped table-hover">
+    <thead>
+
+        <tr class="table-active"> 
+            <th>Item Name </th>
+            <th>Image</th>
+            <th>Quantity </th>
+            <th>Calories</th>
+            <th>Delete</th>
+        </tr>
+
+    </thead>
+
+<tbody>
+  <tr class="table-active">
+<% @meals.each do |meal| %>
+  <td ><%= meal.name %></td>
+  <td ><img class="col s3" src="<%= meal.thumbnail %>"> </td>
+
+
+
+
+  <td  ><%= meal.quantity %> <%= meal.units %></td>
+  <td  ><%= meal.calories %></span> Calories</td>
+   <td >   <%= link_to meal, method: :delete, data: { confirm: 'Are you sure?'} do %>
+      <i class="material-icons">➖</i><td>
+      </tr>
+
+
+      <% end %>
+
+ 
+<% end %>
+
+<br>
+ 
+   
+  </tbody>
+</table>
+<br>
+<%= render 'form', meal: Meal.new %>
