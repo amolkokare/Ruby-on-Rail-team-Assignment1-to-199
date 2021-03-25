@@ -1,0 +1,24 @@
+<h2 style="text-align: center;color: red;font-size: 70px;">Meals</h2>
+<div style="background-image: url('https://cdn-a.william-reed.com/var/wrbm_gb_food_pharma/storage/images/publications/food-beverage-nutrition/nutraingredients-usa.com/article/2019/12/23/a-leap-forward-ana-proposes-definition-for-personalized-nutrition/10500290-1-eng-GB/A-leap-forward-ANA-proposes-definition-for-Personalized-Nutrition_wrbm_large.jpg');">
+<% @meals.each do |meal| %>
+  <div class="card-panel card-flex row">
+    <img class="col s3" src="<%= meal.thumbnail %>">
+    <div class="card-flex col s10">
+      <p class="meal-name"><%= meal.name %></p>
+      <p class="meal-qty"><%= meal.quantity %> <%= meal.units %></p>
+      <p class="meal-cals"><span class="text-bold teal-text"><%= meal.calories %></span> Calories</p>
+      <%= link_to meal, method: :delete, data: { confirm: 'Are you sure?'}, class: "waves-effect waves-light btn-floating green lighten-1" do %>
+        <i class="material-icons">➖</i>
+      <% end %>
+    </div>
+  </div>
+<% end %>
+
+<br>
+
+<div class="card new-meal-card">
+  <div class="card-content">
+    <%= render 'form', meal: Meal.new %>
+  </div>
+</div>
+</div>
