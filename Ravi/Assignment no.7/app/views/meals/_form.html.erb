@@ -1,0 +1,15 @@
+<%= form_with(model: meal) do |form| %>
+  <div style="text-align: center;">
+    <%= form.label "Enter Name of Meal", class: "font-label" %>
+&nbsp;&nbsp;
+    <%= form.text_field :name, placeholder: "quantity, Name" %>
+ 
+<br>
+<br>
+
+ 
+    <%= form.submit "Add", class: "btn btn-primary" %>
+ 
+<% end %>
+</div>
+<hr>
