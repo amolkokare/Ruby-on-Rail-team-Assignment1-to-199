@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+    <title>Rails Employee Tracker</title>
+
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <!-- Put body in a bootstrap container -->
+    <div class="container pt-3 pb-3">
+      <!-- If any notices or alerts are sent, render them with corresponding partial -->
+      <% if notice %>
+        <%= render 'layouts/notices' %>
+      <% end %>
+      <% if alert %>
+        <%= render 'layouts/alerts' %>
+      <% end %>
+      <%= yield %>
+    </div>
+
+    
+  </body>
+</html>

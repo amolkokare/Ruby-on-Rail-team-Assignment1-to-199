@@ -1,0 +1,17 @@
+
+<%= form_with model: [@company, @company.employees.build] do |form| %>
+  
+      <%= form.text_field :email, class: "form-control mb-3", placeholder: "Email" %>
+   
+    <%# This is one of many ways to implement radio buttons in rails %>
+   
+      <%= form.radio_button :role, "Employee", checked: true, class: "form-check-input" %>
+      <%= form.label :role, "Employee", value: "Employee", class: "form-check-label" %>
+    
+      <%= form.radio_button :role, "Manager", class: "form-check-input" %>
+      <%= form.label :role, "Manager", value: "Manager", class: "form-check-label" %>
+   
+  
+    <%= form.submit "Submit", class: "btn btn-secondary" %>
+  
+<% end %>

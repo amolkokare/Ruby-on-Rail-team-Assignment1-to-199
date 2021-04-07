@@ -1,0 +1,23 @@
+
+      <div><h2><%= @company.name %></h2></div>
+      <%= render "links" %>
+    </div>
+   
+      <strong>Associates</strong>: <%= @company.count.employee_count %> -
+      <strong>Managers</strong>: <%= @company.count.manager_count %>
+    </div>
+  </div>
+  <%# List all employees w/delete btns %>
+  
+      <%= render @company.employees %>
+    </div>
+  </div>
+  <%# Display employee form in card footer %>
+  
+        <h4>Add Employee</h4>
+      </div>
+      
+        <%= render "employees/form" %>
+    
+<%# Adds a back button at the bottom that takes user back to companies page %>
+  <%= link_to "Back", companies_path, class: 'btn btn-dark px-5' %>
