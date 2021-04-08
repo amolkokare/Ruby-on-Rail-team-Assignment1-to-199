@@ -1,0 +1,17 @@
+<%= form_with(model: meal) do |form| %>
+  <div style="text-align: left;">
+    <%= form.label "search food what you want?", class: "font-label" %>
+
+    <%= form.text_field :name, placeholder: "Enter Food Name" %>
+
+    <%= form.submit "Done", class: "btn btn-success" %>
+
+<% end %>
+</div>
+<hr>
+
+
+
+
+<%# Set nutritionix_app_id=11f1af37
+Set nutritionix_app_key=d1f64dd6f46907a82a37c700c48a4704%>

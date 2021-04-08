@@ -1,0 +1,15 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+    <ul class="navbar-nav ">
+      <li class="nav-item ">
+         <%= link_to 'sign out', destroy_user_session_path, method: :delete,class:'nav-link text-white bg-primary fw-bold' %>
+    </li>
+      <li class="nav-item">
+        <%= link_to 'Login', new_user_session_path, class:'nav-link text-black bg-primary fw-bold' %>
+      </li>
+            <li class="nav-item">
+        <%= link_to 'Sign_up', new_user_session_path, class:'nav-link text-white bg-primary fw-bold' %>
+      </li>
+    </ul>
+</nav>

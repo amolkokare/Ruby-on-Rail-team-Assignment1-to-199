@@ -1,0 +1,36 @@
+<h2 style="text-align:right">Assignment no-7 Nutrition App</h2>
+<%= render 'partial/nav' %>
+
+<div style="text-align:center;font-size: 20px">
+
+<hr>
+<table class="table table-striped">
+	<thead>
+		<style>
+ table, th, td {
+   border: 1px solid black;
+   border-collapse: collapse;
+ }
+ </style>
+
+		<tr>
+			<th>Food Name </th>
+		    <th>Picture </th>
+
+			<th>Calories</th>
+		</tr>
+
+	</thead>
+<tbody>
+<% @meals.each do |meal| %>
+  <td><%= meal.name %></td>
+  <td><img class="col s3" src="<%= meal.thumbnail %>"> </td>
+  <td><%= meal.calories %></span> Calories</td>
+   <td>   <%= link_to meal, method: :delete, data: { confirm: 'Are you sure?'} do %>
+
+      </tr>
+      <% end %>
+<% end %>
+    <%= render 'form', meal: Meal.new %>
+  </tbody>
+</table>
